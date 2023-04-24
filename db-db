@@ -1,0 +1,3 @@
+<connectionStrings>
+		<add name="cnn" connectionString="Server=LAPTOP-84K8JSFJ\SQLEXPRESS; Database=Example; User Id=sa; Pwd=entrar123;" />
+	</connectionStrings>

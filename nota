@@ -15,7 +15,7 @@ INNER JOIN Venta AS vn ON pd.CodigoProducto = vn.CodigoProducto
 WHERE YEAR(vn.Fecha)=2019
 
 
-SELECT  pd.Nombre
+SELECT TOP 500  pd.Nombre , vn.Fecha
 FROM Producto AS pd
 INNER JOIN Venta AS vn
 ON pd.CodigoCategoria =vn.CodigoProducto

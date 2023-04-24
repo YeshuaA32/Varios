@@ -1,0 +1,22 @@
+Select TOP 1 ct.Nombre
+FROM Categoria AS ct
+INNER JOIN Producto AS pd
+ON ct.CodigoCategoria = pd.CodigoCategoria
+INNER JOIN Venta AS vn
+ON pd.CodigoCategoria = vn.CodigoProducto
+ORDER BY Fecha DESC
+
+
+
+SELECT DISTINCT  ct.CodigoCategoria, ct.Nombre
+FROM Categoria as ct
+INNER JOIN Producto AS pd ON ct.CodigoCategoria = pd.CodigoCategoria
+INNER JOIN Venta AS vn ON pd.CodigoProducto = vn.CodigoProducto
+WHERE YEAR(vn.Fecha)=2019
+
+
+SELECT  pd.Nombre
+FROM Producto AS pd
+INNER JOIN Venta AS vn
+ON pd.CodigoCategoria =vn.CodigoProducto
+Where YEAR(vn.Fecha)=2019 AND CodigoCategoria =1
